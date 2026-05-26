@@ -7,8 +7,6 @@ public class PauseMenuStuff : MonoBehaviour
 
     public GameObject UI;
 
-
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +17,7 @@ public class PauseMenuStuff : MonoBehaviour
     void Update()
     {
         KeyBoardInput();
+        Mechanics();
     }
 
     void KeyBoardInput()
@@ -31,6 +30,14 @@ public class PauseMenuStuff : MonoBehaviour
 
     void Mechanics()
     {
-        
+        switch(showMenu)
+        {
+            case true:
+                UI.SetActive(true);
+                break;
+            case false:
+                UI.SetActive(false);
+                break;
+        }
     }
 }

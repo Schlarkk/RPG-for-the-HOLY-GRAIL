@@ -5,6 +5,9 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
 
+    PauseMenuStuff pms;
+    public GameObject ui;
+
     public float maxSpeed = 5f;
     public float acceleration = 20f;
     public float deceleration = 25f;
@@ -19,12 +22,14 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        pms = ui.GetComponent<PauseMenuStuff>();
     }
 
 
     void Update()
     {
-        TrackInput();
+        if(!pms.showMenu)
+            TrackInput();
     }
 
     void TrackInput()
