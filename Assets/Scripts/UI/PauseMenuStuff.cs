@@ -7,10 +7,13 @@ public class PauseMenuStuff : MonoBehaviour
 
     public GameObject UI;
 
+    public GameObject player;
+    CharacterDecider cd;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        cd = player.GetComponent<CharacterDecider>();
     }
 
     // Update is called once per frame
@@ -40,4 +43,28 @@ public class PauseMenuStuff : MonoBehaviour
                 break;
         }
     }
+
+
+
+    public void switchCharacter()
+    {
+        switch(cd.currentCharacter)
+        {
+            case CharacterDecider.Characters.ghost:
+            cd.currentCharacter = CharacterDecider.Characters.cerberus;
+            break;
+            case CharacterDecider.Characters.cerberus:
+            cd.currentCharacter = CharacterDecider.Characters.skeleton;
+            break;
+            case CharacterDecider.Characters.skeleton:
+            cd.currentCharacter = CharacterDecider.Characters.ghost;
+            break;
+        }
+    }
+
+
+
+
+
+
 }

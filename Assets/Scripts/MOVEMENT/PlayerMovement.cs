@@ -5,6 +5,15 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
 
+    GameObject sprite;
+    [HideInInspector]public SpriteRenderer s;
+
+    public Sprite forward;
+    public Sprite backward;
+    public Sprite move;
+
+    bool turn;
+
     PauseMenuStuff pms;
     public GameObject ui;
 
@@ -21,8 +30,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        sprite = transform.GetChild(0).gameObject;
+
         rb = GetComponent<Rigidbody2D>();
         pms = ui.GetComponent<PauseMenuStuff>();
+
+        s = sprite.GetComponent<SpriteRenderer>();
+        
     }
 
 
@@ -47,6 +61,15 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        if(turn)
+        {
+            sprite.transform.localScale = new Vector3(-3.1637f, 3.1637f, 3.1637f);
+        }
+        else if(!turn)
+        {
+            sprite.transform.localScale = new Vector3(3.1637f, 3.1637f, 3.1637f);
+        }
+
         moveInput = GetDirectionFromLastKey();
     }
 
@@ -56,10 +79,22 @@ public class PlayerMovement : MonoBehaviour
         {
             switch(heldKeys[i])
             {
-                case KeyCode.W: return Vector2.up;
-                case KeyCode.S: return Vector2.down;
-                case KeyCode.A: return Vector2.left;
-                case KeyCode.D: return Vector2.right;
+                case KeyCode.W: 
+                s.sprite = forward;
+                turn = false;
+                return Vector2.up;
+                case KeyCode.S:
+                s.sprite = backward;
+                turn = false;
+                return Vector2.down;
+                case KeyCode.A:
+                s.sprite = move;
+                turn = false;
+                return Vector2.left;
+                case KeyCode.D:
+                s.sprite = move;
+                turn = true;
+                return Vector2.right;
             }
         }
 
