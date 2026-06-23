@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageController : MonoBehaviour
 {
     public float damageNumb;
-    public int  critChance;
+   
 
     public int critMultiplier;
 

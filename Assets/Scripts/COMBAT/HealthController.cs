@@ -9,9 +9,11 @@ public class HealthController : MonoBehaviour
 {
    public float healthNumb;
    public int maxHealthNumb;
-   public Image HealthImage;
 
    public int armorNumb;
+   public Image HealthImage;
+
+   
     
     void Awake()
     {
@@ -35,5 +37,10 @@ public class HealthController : MonoBehaviour
         {
             healthNumb = 0f;
         }
+    }
+
+    public void armorFunc()
+    {
+        
     }
 }

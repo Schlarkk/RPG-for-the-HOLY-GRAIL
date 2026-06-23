@@ -1,16 +1,35 @@
+using System.Collections.Concurrent;
 using UnityEngine;
 
 public class Turn : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
+    public enum gameState
+    {
+     PlayerTurn,
+     EnemyTurn   
+    }
+
+    public gameState Currentstate;
+    public CheckOrder checkOrder;
+        
+    
     void Start()
+    {
+        checkOrder=GetComponent<CheckOrder>();
+    }
+
+    
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ActiveTurn()
     {
-        
+        //if()
+        {
+            
+        }
     }
 }
