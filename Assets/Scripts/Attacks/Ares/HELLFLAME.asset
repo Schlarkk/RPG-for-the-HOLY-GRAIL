@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30563cdc78911e447ba7f1413fccafa7, type: 3}
+  m_Name: HELLFLAME
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  attackName: HELLFLAME
+  attackPower: 65
+  canTargetAllies: 0
+  canTargetEnemies: 1
+  attackType: 1
+  attackColour: 11
+  mpCost: 95
+  hitCount: 1
+  requiresCharge: 0
+  statusesOnTarget:
+  - statusToInflict: {fileID: 11400000, guid: 3cb163c579053a04cb9f0c4c12818ddb, type: 2}
+    potency: 12
+    count: 8
+  - statusToInflict: {fileID: 11400000, guid: 88154424f16cad94c9e5458df422b080, type: 2}
+    potency: 5
+    count: 3
+  statusesOnSelf:
+  - statusToInflict: {fileID: 11400000, guid: 3cb163c579053a04cb9f0c4c12818ddb, type: 2}
+    potency: 3
+    count: 1
+  description: 

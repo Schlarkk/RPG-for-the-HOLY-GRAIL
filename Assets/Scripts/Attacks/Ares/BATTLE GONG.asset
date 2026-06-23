@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30563cdc78911e447ba7f1413fccafa7, type: 3}
+  m_Name: BATTLE GONG
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  attackName: BATTLE GONG
+  attackPower: 5
+  canTargetAllies: 0
+  canTargetEnemies: 1
+  attackType: 0
+  attackColour: 0
+  mpCost: 35
+  hitCount: 1
+  requiresCharge: 0
+  statusesOnTarget:
+  - statusToInflict: {fileID: 11400000, guid: b7e4950ae5910244dace78c52d94ffda, type: 2}
+    potency: 20
+    count: 2
+  - statusToInflict: {fileID: 11400000, guid: 88154424f16cad94c9e5458df422b080, type: 2}
+    potency: 20
+    count: 2
+  statusesOnSelf:
+  - statusToInflict: {fileID: 11400000, guid: 4262849d482ed194097573622e898ab5, type: 2}
+    potency: 5
+    count: 2
+  description: 

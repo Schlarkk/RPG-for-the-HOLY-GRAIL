@@ -38,15 +38,12 @@ public class CharacterDecider : MonoBehaviour
         {
             case Characters.ghost:
             AssaignSprites(ghostF, ghostB, ghostM);
-            pm.s.sprite = ghostB;
             break;
             case Characters.cerberus:
             AssaignSprites(CerbF, CerbB, CerbM);
-            pm.s.sprite = CerbB;
             break;
             case Characters.skeleton:
             AssaignSprites(skelF, skelB, skelM);
-            pm.s.sprite = skelB;
             break;
         }
     }

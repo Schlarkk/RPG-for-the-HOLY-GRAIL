@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30563cdc78911e447ba7f1413fccafa7, type: 3}
+  m_Name: Gnaw
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  attackName: GNAW
+  attackPower: 50
+  canTargetAllies: 0
+  canTargetEnemies: 1
+  attackType: 0
+  attackColour: 0
+  mpCost: 25
+  hitCount: 2
+  requiresCharge: 0
+  statusesOnTarget:
+  - statusToInflict: {fileID: 11400000, guid: df17f7f611c8b2545ac779c7d42b12b2, type: 2}
+    potency: 3
+    count: 2
+  statusesOnSelf:
+  - statusToInflict: {fileID: 11400000, guid: da2188704e1c0ac44b3d79a0515e65ba, type: 2}
+    potency: 5
+    count: 3
+  - statusToInflict: {fileID: 11400000, guid: b869f06691ab5d8448843ccfe41a2727, type: 2}
+    potency: 2
+    count: 4
+  description: A Gnawing bite at your enemie
