@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DamageController : MonoBehaviour
 {
-<<<<<<< HEAD
+ 
     public float damageNumb;
    
 
@@ -15,11 +15,11 @@ public class DamageController : MonoBehaviour
      
     
     
-    void Start()
-=======
-    public static float GetTypeMultiplier(PlayerAttack.AttackColour attackColour,
+    void Start(){}
+
+     static float GetTypeMultiplier(PlayerAttack.AttackColour attackColour,
                                           PlayerAttack.AttackColour defenderType)
->>>>>>> 303e95b2036a5df8957afb7fbf30fc667559f059
+
     {
         switch (defenderType)
         {
