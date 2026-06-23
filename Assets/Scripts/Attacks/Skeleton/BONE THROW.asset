@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30563cdc78911e447ba7f1413fccafa7, type: 3}
+  m_Name: BONE THROW
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  attackName: BONE THROW
+  attackPower: 35
+  canTargetAllies: 0
+  canTargetEnemies: 1
+  attackType: 1
+  attackColour: 10
+  mpCost: 0
+  inflictsStatus: 1
+  statusToInflict: {fileID: 11400000, guid: df17f7f611c8b2545ac779c7d42b12b2, type: 2}
+  statusPotency: 4
+  statusCount: 2
+  description: Throw a bone, throw a bone!
